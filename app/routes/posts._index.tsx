@@ -11,7 +11,7 @@ export default function Posts() {
   const { posts } = useLoaderData<typeof loader>();
   console.log(posts);
   return (
-    <main>
+    <main className="container mx-auto px-4">
       <h1>Posts</h1>
       <ul>
         {posts.map((post) => (
