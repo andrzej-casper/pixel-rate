@@ -36,7 +36,7 @@ export default function Index() {
         <div className="container mx-auto px-4 pt-24 pb-24">
           <div className="text-center">
             <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl tracking-tight text-white">
-              Unleash <span style={{textShadow: "0px 0px 16px rgba(66, 68, 90, 1);"}}>cinema experience</span> with {" "}
+              Unleash <span style={{textShadow: "0px 0px 16px rgba(66, 68, 90, 1)"}}>cinema experience</span> with {" "}
               <span className="pb-3 sm:pb-5 bg-clip-text text-primary-500">tailored</span>
             </h1>
             <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl tracking-tight text-white">
@@ -54,12 +54,12 @@ export default function Index() {
       </div>
       <div className="container mx-auto px-4">
         <div className="flex text-3xl font-extrabold sm:text-4xl py-10 items-center select-none">
-          <h1 className="text-primary-900">
+          <h1 className="text-primary-700 hover:text-primary-800">
             <Link to="/movies">
               Movies
             </Link>
           </h1>
-          <div className="ml-4 flex h-6 w-6 items-center justify-center text-primary-800 cursor-pointer">
+          <div className="ml-4 flex h-6 w-6 items-center justify-center text-primary-700 hover:text-primary-900 cursor-pointer">
             <FontAwesomeIcon icon={faArrowsRotate} onClick={() => randomizeMovies()}/>
           </div>
         </div>
