@@ -1,6 +1,7 @@
 import type { LinksFunction, LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
+  Form,
   Link,
   Links,
   LiveReload,
@@ -18,6 +19,7 @@ import tailwindStylesheetUrl from "~/styles/tailwind.css";
 import commonStylesheetUrl from "~/styles/common.css";
 import toastifyStylesheetUrl from "react-toastify/dist/ReactToastify.css";
 import { AppProvider } from "./context";
+import { useOptionalUser } from "./utils";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwindStylesheetUrl },
@@ -30,6 +32,8 @@ export const loader = async ({ request }: LoaderArgs) => {
 };
 
 export default function App() {
+  const user = useOptionalUser();
+
   return (
     <AppProvider>
       <html lang="en" className="h-full">
@@ -51,16 +55,30 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex flex-row">
-                  <Link to="/login">
-                    <div className="items-center px-4 py-2 border border-transparent text-base font-medium text-white hover:text-gray-300">
-                      Login
-                    </div>
-                  </Link>
-                  <Link to="/posts">
-                    <div className="items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 shadow-md">
-                      Get started
-                    </div>
-                  </Link>
+                  { user !== undefined &&
+                    <Form action="/logout" method="post">
+                      <button
+                        type="submit"
+                        className="items-center px-4 py-2 border border-transparent text-base font-medium text-white hover:text-gray-300"
+                      >
+                        Logout {user.email}
+                      </button>
+                    </Form>
+                  }
+                  { user === undefined &&
+                    <Link to="/login">
+                      <div className="items-center px-4 py-2 border border-transparent text-base font-medium text-white hover:text-gray-300">
+                        Login
+                      </div>
+                    </Link>
+                  }
+                  { user === undefined &&
+                    <Link to="/posts">
+                      <div className="items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 shadow-md">
+                        Get started
+                      </div>
+                    </Link>
+                  }
                 </div>
               </div>
             </div>
