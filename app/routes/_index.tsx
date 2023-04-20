@@ -1,14 +1,24 @@
-import type { V2_MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { V2_MetaFunction, json } from "@remix-run/node";
+import { Link, useLoaderData } from "@remix-run/react";
+import { MovieView } from "~/components/movie";
+import { getMovies } from "~/models/movie.server";
 
 import { useOptionalUser } from "~/utils";
 
 export const meta: V2_MetaFunction = () => [{ title: "Remix Notes" }];
 
+export const loader = async () => {
+  return json({ movies: await getMovies() });
+};
+
 export default function Index() {
   const user = useOptionalUser();
+  const { movies } = useLoaderData<typeof loader>();
+
+  const randomMovies = movies.sort(() => 0.5 - Math.random()).slice(0, 6);
+
   return (
-    <main>
+    <main className="mb-6">
       <div className="bg-slate-500">
         <div className="container mx-auto px-4 pt-24 pb-24">
           <div className="text-center">
@@ -20,10 +30,31 @@ export default function Index() {
               <span className="pb-3 sm:pb-5 bg-clip-text text-primary-500">movie recommendations</span>
             </h1>
           </div>
+          <div className="flex justify-center mt-20">
+            <Link to="/register">
+              <span className="rounded-lg bg-primary-600 hover:bg-primary-700 shadow-xl text-white py-4 px-8 text-xl mx-auto">
+                Try <b>PixelRate</b> for free
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="container mx-auto px-4">
-        ...
+        <h1 className="text-3xl font-extrabold sm:text-4xl text-primary-900 py-10">
+          Movies{"  "}
+          <Link to="/movies">
+            <span className="text-2xl text-primary-800">
+              - see all
+            </span>
+          </Link>
+        </h1>
+        <ul className="grid grid-cols-3 gap-x-12 gap-y-8">
+          {randomMovies.map((movie) => (
+            <li key={movie.slug}>
+              <MovieView movie={movie} />
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
   );
