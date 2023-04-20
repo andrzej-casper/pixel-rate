@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 export function MovieView({ movie }) {
   return (
     <Link
-      to={movie.slug}
+      to={"/movies/" + movie.slug}
     >
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
     <div className="flex">
