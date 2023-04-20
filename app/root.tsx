@@ -34,7 +34,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex flex-col h-full gap-7 bg-gray-50">
+      <body className="flex flex-col h-full bg-gray-50">
         <header className="px-4 bg-slate-500">
           <div className="container mx-auto py-2">
             <div className="flex flex-row">
