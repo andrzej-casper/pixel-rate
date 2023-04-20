@@ -44,8 +44,8 @@ export default function App() {
             <div className="container mx-auto py-2">
               <div className="flex flex-row">
                 <div className="flex-grow">
-                  <div className="flex flex-row items-center h-full">
-                    <Link to="/">
+                  <div className="flex flex-row items-center h-full select-none">
+                    <Link to="/" className="p-1">
                       <img src={logo} alt="PixelRate" className="h-8 w-auto" />
                     </Link>
                   </div>
