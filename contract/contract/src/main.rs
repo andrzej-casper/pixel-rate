@@ -21,7 +21,7 @@ const RATING_ARG_NAME: &str = "rating";
 #[no_mangle]
 pub extern "C" fn call() {
     let movie: String = runtime::get_named_arg(MOVIE_ARG_NAME);
-    let rating: u8 = runtime::get_named_arg(RATING_ARG_NAME);
+    let rating: String = runtime::get_named_arg(RATING_ARG_NAME);
 
     match runtime::get_key(&movie) {
         None => {
@@ -31,7 +31,7 @@ pub extern "C" fn call() {
         Some(_key) => {
             //Get the URref of the named key
             let key: URef = _key.try_into().unwrap_or_revert();
-            storage::write(key, rating);   
+            storage::write(key, rating);
         }
     }
 }
