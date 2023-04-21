@@ -1,6 +1,7 @@
 import { CLPublicKey, CLValueBuilder, CasperClient, DeployUtil, RuntimeArgs, Contracts } from "casper-js-sdk";
 
-const NODE_URL = "65.108.127.242:7777/rpc";
+//const NODE_URL = "http://65.108.127.242:7777/rpc";
+const NODE_URL = "http://127.0.0.1:7777/rpc";
 const NETWORK_NAME = "casper-test";
 
 export async function sendRating(activeKey, wasm, movie, rating) {
