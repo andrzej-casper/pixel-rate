@@ -1,7 +1,8 @@
 import type { ActionArgs, LoaderArgs, V2_MetaFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
-import { Form, Link, useActionData, useSearchParams } from "@remix-run/react";
+import { Form, Link, useActionData, useNavigate, useSearchParams } from "@remix-run/react";
 import { useEffect, useRef } from "react";
+import WalletButton from "~/components/wallet.button";
 
 import { createUser, getUserByEmail } from "~/models/user.server";
 import { createUserSession, getUserId } from "~/session.server";
@@ -71,6 +72,7 @@ export default function Join() {
   const actionData = useActionData<typeof action>();
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (actionData?.errors?.email) {
@@ -79,6 +81,11 @@ export default function Join() {
       passwordRef.current?.focus();
     }
   }, [actionData]);
+
+  const casperWalletConnected = (key: string) => {
+    console.log("Register with Casper:" , key);
+    navigate("/movies");
+  }
 
   return (
     <div className="flex min-h-full flex-col justify-center">
@@ -157,6 +164,11 @@ export default function Join() {
               >
                 Log in
               </Link>
+            </div>
+          </div>
+          <div className="border-t">
+            <div className="my-4">
+              <WalletButton connectedCallback={casperWalletConnected.bind(this)} />
             </div>
           </div>
         </Form>
