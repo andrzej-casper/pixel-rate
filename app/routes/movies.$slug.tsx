@@ -1,27 +1,34 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useNavigate } from "@remix-run/react";
+import { readFile } from "fs/promises";
 import { useState } from "react";
 import invariant from "tiny-invariant";
 import { MoviePageView } from "~/components/moviepage";
 import { getMovie } from "~/models/movie.server";
+import { loaderMovieWasm } from "~/models/movie-wasm.server";
+import { useOptionalUser } from "~/utils";
+import useApp from "~/context";
+import { toast } from "react-toastify";
 
-export const loader = async ({ params, request }: LoaderArgs) => {
-  invariant(params.slug, `params.slug is required`);
-
-  const movie = await getMovie(params.slug);
-  invariant(movie, `Movie not found: ${params.slug}`);
-
-  return json({ movie });
-};
+export const loader = loaderMovieWasm;
 
 export default function MovieDetailsPage() {
-  const { movie } = useLoaderData<typeof loader>();
+  const { movie, ratingWasm } = useLoaderData<typeof loader>();
+  const user = useOptionalUser();
+  const { activeWalletKey } = useApp();
+  const navigate = useNavigate();
 
   const [starsHovered, setStarsHovered] = useState(0);
 
   const stars = [1, 2, 3, 4, 5];
 
   const placeRating = (slug: string, rate: number) => {
+    if (!user && !activeWalletKey) {
+      toast.warning("You must be logged first.");
+      navigate("/login");
+      return;
+    }
+
     console.log("Rated", slug, "with", rate);
   };
 
@@ -34,7 +41,7 @@ export default function MovieDetailsPage() {
         <div className="flex justify-center">
           <div className="w-full xl:w-1/2">
             <MoviePageView movie={movie}>
-              <div className="flex items-center justify-center pt-20">
+              <div className="flex items-center justify-center pt-20 select-none">
                 <div className="flex items-center space-x-2">
                   <div className="flex items-center" onMouseOut={() => setStarsHovered(0)}>
                     {stars.map((num) => (
