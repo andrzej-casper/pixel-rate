@@ -13,10 +13,12 @@ export type CasperWalletState = {
   activeKey: string | null;
 };
 
-export default function Wallet() {
+export default function WalletButton({
+  connectedCallback = (key: string) => {},
+}) {
   const [provider, setProvider] = useState(null);
 
-  const { activeWalletKey, setActiveWalletKey } = useApp();
+  const { activeWalletKey, setActiveWalletKey, unsetActiveWalletKey } = useApp();
 
   const requestConnection = async () => {
     if (provider === null) {
@@ -28,6 +30,7 @@ export default function Wallet() {
       //console.log("already connected!");
       const key = await provider.getActivePublicKey();
       setActiveWalletKey(key);
+      connectedCallback(key);
     } else {
       //await provider.disconnectFromSite();
       let request_res = await provider.requestConnection();
@@ -44,7 +47,8 @@ export default function Wallet() {
 
   const handleDisconnected = useCallback((event: any) => {
     console.log("Got disconnected", event);
-  }, []);
+    unsetActiveWalletKey();
+  }, [unsetActiveWalletKey]);
 
   useEffectOnce(() => {
     try {
@@ -76,9 +80,11 @@ export default function Wallet() {
   }, [provider, handleConnected, handleDisconnected]);
 
   return (
-    <div className="container mx-auto">
-      state: { activeWalletKey }
-      <button onClick={() => requestConnection()}>x</button>
-    </div>
+    <button type="button" className="w-full rounded bg-primary-500  px-4 py-2 text-white hover:bg-primary-600"
+      onClick={() => requestConnection()}
+    >
+      {activeWalletKey === null && <>Connect with <strong>Casper Wallet</strong></>}
+      {activeWalletKey !== null && <><strong>Casper Wallet</strong> connected!</>}
+    </button>
   );
 }

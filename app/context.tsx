@@ -15,6 +15,13 @@ const appReducer = (state, action) => {
         ...state,
         activeWalletKey: payload.key
       };
+    case "UNSET_ACTIVE_WALLET_KEY":
+      console.trace("UNSET_ACTIVE_WALLET_KEY", payload);
+
+      return {
+        ...state,
+        activeWalletKey: null
+      };
     default:
       throw new Error(`No case for type ${type} found in appReducer.`);
   }
@@ -32,9 +39,17 @@ export const AppProvider = ({ children }) => {
     });
   };
 
+  const unsetActiveWalletKey = () => {
+    dispatch({
+      type: "UNSET_ACTIVE_WALLET_KEY",
+      payload: {}
+    });
+  };
+
   const value = {
     activeWalletKey: state.activeWalletKey,
     setActiveWalletKey,
+    unsetActiveWalletKey,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
