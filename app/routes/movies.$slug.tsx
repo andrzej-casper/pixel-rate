@@ -9,7 +9,7 @@ import { loaderMovieWasm } from "~/models/movie-wasm.server";
 import { useOptionalUser } from "~/utils";
 import useApp from "~/context";
 import { toast } from "react-toastify";
-import { sendRating } from "~/blockchain";
+import { sendDeploy } from "~/blockchain";
 
 export const loader = loaderMovieWasm;
 
@@ -27,15 +27,25 @@ export default function MovieDetailsPage() {
 
   const stars = [1, 2, 3, 4, 5];
 
-  const placeRating = (slug: string, rate: number) => {
+  const placeRating = async (slug: string, rate: number) => {
+    console.log("Rated", slug, "with", rate);
+
     if (!user && !activeWalletKey) {
       toast.warning("You must be logged first.");
       navigate("/login");
       return;
     }
 
-    console.log("Rated", slug, "with", rate);
-    sendRating(activeWalletKey, ratingWasm, slug, rate);
+    if (!activeWalletKey) {
+      toast.error("Rating is not supported for non-blockchain accounts yet.")
+      return;
+    }
+
+    const depHash = await sendDeploy(activeWalletKey, ratingWasm, slug, rate);
+    toast.success("Rating submitted to blockchain!");
+    setTimeout(() => {
+      window.open("https://testnet.cspr.live/deploy/" + depHash, "_blank");
+    }, 4000);
   };
 
   return (

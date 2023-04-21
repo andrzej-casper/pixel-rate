@@ -4,7 +4,7 @@ import { CLPublicKey, CLValueBuilder, CasperClient, DeployUtil, RuntimeArgs, Con
 const NODE_URL = "http://127.0.0.1:7777/rpc";
 const NETWORK_NAME = "casper-test";
 
-export async function sendRating(activeKey, wasm, movie, rating) {
+export async function sendDeploy(activeKey, wasm, movie, rating) {
   const activePublicKey = CLPublicKey.fromHex(activeKey);
 
   const casperClient = new CasperClient(NODE_URL);
@@ -12,7 +12,7 @@ export async function sendRating(activeKey, wasm, movie, rating) {
 
   const args = RuntimeArgs.fromMap({
     movie: CLValueBuilder.string(movie),
-    rating: CLValueBuilder.u8(rating),
+    rating: CLValueBuilder.string(''+rating),
   });
   //console.log(args, wasm);
 
@@ -22,5 +22,38 @@ export async function sendRating(activeKey, wasm, movie, rating) {
 
   const deploy = DeployUtil.makeDeploy(param, session, payment);
   const deployJson = DeployUtil.deployToJson(deploy);
-  console.log(deployJson);
+  //console.log(deployJson);
+
+  const CasperWalletProvider = window.CasperWalletProvider;
+  const provider = CasperWalletProvider();
+
+  console.log('active key', activeKey);
+
+  let signedDeployJSON;
+  try {
+    let signature = await provider.sign(JSON.stringify(deployJson), activeKey);
+    // console.log(signature)
+    if (signature.cancelled) {
+      alert('Sign cancelled');
+    } else {
+      let deploySigned = DeployUtil.setSignature(
+        deploy,
+        signature.signature,
+        CLPublicKey.fromHex(activeKey)
+      );
+      signedDeployJSON = DeployUtil.deployToJson(deploySigned)
+    }
+  } catch (err) {
+    alert(err.message);
+    return false;
+  }
+
+  let signedDeploy = DeployUtil.deployFromJson(signedDeployJSON).unwrap();
+  const deployHash = signedDeployJSON.deploy.hash;
+  console.log("Deploy Hash", deployHash);
+
+  let res = await casperClient.putDeploy(signedDeploy);
+  console.log('dep res', res);
+
+  return deployHash;
 }
