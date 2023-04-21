@@ -15,5 +15,7 @@ export const loaderMovieWasm = async ({ params, request }: LoaderArgs) => {
   const file = await readFile(filePath);
   const ratingWasm = new Uint8Array(file.buffer);
 
-  return json({ movie, ratingWasm });
+  const ratingWasmStr = btoa(String.fromCharCode.apply(null, ratingWasm));
+
+  return json({ movie, ratingWasmStr });
 };

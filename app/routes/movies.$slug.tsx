@@ -9,11 +9,16 @@ import { loaderMovieWasm } from "~/models/movie-wasm.server";
 import { useOptionalUser } from "~/utils";
 import useApp from "~/context";
 import { toast } from "react-toastify";
+import { sendRating } from "~/blockchain";
 
 export const loader = loaderMovieWasm;
 
 export default function MovieDetailsPage() {
-  const { movie, ratingWasm } = useLoaderData<typeof loader>();
+  const { movie, ratingWasmStr } = useLoaderData<typeof loader>();
+  const ratingWasm = new Uint8Array(atob(ratingWasmStr).split("").map(
+      (char)=>char.charCodeAt(0)
+    )
+  );
   const user = useOptionalUser();
   const { activeWalletKey } = useApp();
   const navigate = useNavigate();
@@ -30,6 +35,7 @@ export default function MovieDetailsPage() {
     }
 
     console.log("Rated", slug, "with", rate);
+    sendRating(activeWalletKey, ratingWasm, slug, rate);
   };
 
   return (
