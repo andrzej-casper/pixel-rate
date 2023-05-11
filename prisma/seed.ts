@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import movies  from "./movies.json";
 
 const prisma = new PrismaClient();
 
@@ -84,59 +85,6 @@ async function seed() {
       create: post,
     });
   }
-
-  const movies = [
-    {
-      slug: "skazani-na-shawshank",
-      title: "Skazani na Shawshank",
-      pictureUrl: "https://fwcdn.pl/fpo/10/48/1048/6925401.2.jpg",
-    },
-    {
-      slug: "nietykalni",
-      title: "Nietykalni",
-      pictureUrl: "https://fwcdn.pl/fpo/33/90/583390/7441162.2.jpg",
-    },
-    {
-      slug: "zielona-mila",
-      title: "Zielona Mila",
-      pictureUrl: "https://fwcdn.pl/fpo/08/62/862/7517878.2.jpg",
-    },
-    {
-      slug: "ojciech-chrzestny",
-      title: "Ojciech chrzestny",
-      pictureUrl: "https://fwcdn.pl/fpo/10/89/1089/7196615.2.jpg",
-    },
-    {
-      slug: "dwunastu-gniewnych-ludzi",
-      title: "Dwunastu gniewnych ludzi",
-      pictureUrl: "https://fwcdn.pl/fpo/07/01/30701/7492190.2.jpg",
-    },
-    {
-      slug: "forrest-gump",
-      title: "Forrest Gump",
-      pictureUrl: "https://fwcdn.pl/fpo/09/98/998/8021615.2.jpg",
-    },
-    {
-      slug: "lot-nad-kukulczym-gniazdem",
-      title: "Lot nad kukułczym gniazdem",
-      pictureUrl: "https://fwcdn.pl/fpo/10/19/1019/8055822.2.jpg",
-    },
-    {
-      slug: "ojciec-chrzestny-ii",
-      title: "Ojciec chrzestny II",
-      pictureUrl: "https://fwcdn.pl/fpo/10/90/1090/7196616.2.jpg",
-    },
-    {
-      slug: "wladca-piercieni-powrot-krola",
-      title: "Władca Pierścieni: Powrót króla",
-      pictureUrl: "https://fwcdn.pl/fpo/18/41/11841/7494142.2.jpg",
-    },
-    {
-      slug: "lista-schindlera",
-      title: "Lista Schindlera",
-      pictureUrl: "https://fwcdn.pl/fpo/12/11/1211/7254286.2.jpg",
-    },
-  ];
 
   for (const movie of movies) {
     await prisma.movie.upsert({

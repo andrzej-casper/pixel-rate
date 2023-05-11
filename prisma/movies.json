@@ -1,0 +1,1252 @@
+[
+  {
+    "slug": "the-shawshank-redemption",
+    "title": "The Shawshank Redemption",
+    "imdb_rating": 9.2
+  },
+  {
+    "slug": "the-godfather",
+    "title": "The Godfather",
+    "imdb_rating": 9.2
+  },
+  {
+    "slug": "the-dark-knight",
+    "title": "The Dark Knight",
+    "imdb_rating": 9.0
+  },
+  {
+    "slug": "the-godfather-part-ii",
+    "title": "The Godfather Part II",
+    "imdb_rating": 9.0
+  },
+  {
+    "slug": "12-angry-men",
+    "title": "12 Angry Men",
+    "imdb_rating": 9.0
+  },
+  {
+    "slug": "schindler-s-list",
+    "title": "Schindler's List",
+    "imdb_rating": 8.9
+  },
+  {
+    "slug": "the-lord-of-the-rings-the-return-of-the-king",
+    "title": "The Lord of the Rings: The Return of the King",
+    "imdb_rating": 8.9
+  },
+  {
+    "slug": "pulp-fiction",
+    "title": "Pulp Fiction",
+    "imdb_rating": 8.8
+  },
+  {
+    "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "imdb_rating": 8.8
+  },
+  {
+    "slug": "the-good-the-bad-and-the-ugly",
+    "title": "The Good, the Bad and the Ugly",
+    "imdb_rating": 8.8
+  },
+  {
+    "slug": "forrest-gump",
+    "title": "Forrest Gump",
+    "imdb_rating": 8.8
+  },
+  {
+    "slug": "fight-club",
+    "title": "Fight Club",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "the-lord-of-the-rings-the-two-towers",
+    "title": "The Lord of the Rings: The Two Towers",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "inception",
+    "title": "Inception",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "star-wars-episode-v-the-empire-strikes-back",
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "the-matrix",
+    "title": "The Matrix",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "goodfellas",
+    "title": "Goodfellas",
+    "imdb_rating": 8.7
+  },
+  {
+    "slug": "one-flew-over-the-cuckoo-s-nest",
+    "title": "One Flew Over the Cuckoo's Nest",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "se7en",
+    "title": "Se7en",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "it-s-a-wonderful-life",
+    "title": "It's a Wonderful Life",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "seven-samurai",
+    "title": "Seven Samurai",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "the-silence-of-the-lambs",
+    "title": "The Silence of the Lambs",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "saving-private-ryan",
+    "title": "Saving Private Ryan",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "city-of-god",
+    "title": "City of God",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "interstellar",
+    "title": "Interstellar",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "life-is-beautiful",
+    "title": "Life Is Beautiful",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "the-green-mile",
+    "title": "The Green Mile",
+    "imdb_rating": 8.6
+  },
+  {
+    "slug": "star-wars-episode-iv-a-new-hope",
+    "title": "Star Wars: Episode IV - A New Hope",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "terminator-2-judgment-day",
+    "title": "Terminator 2: Judgment Day",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "back-to-the-future",
+    "title": "Back to the Future",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "spirited-away",
+    "title": "Spirited Away",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-pianist",
+    "title": "The Pianist",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "psycho",
+    "title": "Psycho",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "parasite",
+    "title": "Parasite",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "leon-the-professional",
+    "title": "Léon: The Professional",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "gladiator",
+    "title": "Gladiator",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-lion-king",
+    "title": "The Lion King",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "american-history-x",
+    "title": "American History X",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-departed",
+    "title": "The Departed",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "whiplash",
+    "title": "Whiplash",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-prestige",
+    "title": "The Prestige",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-usual-suspects",
+    "title": "The Usual Suspects",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "casablanca",
+    "title": "Casablanca",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "grave-of-the-fireflies",
+    "title": "Grave of the Fireflies",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "harakiri",
+    "title": "Harakiri",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "the-intouchables",
+    "title": "The Intouchables",
+    "imdb_rating": 8.5
+  },
+  {
+    "slug": "modern-times",
+    "title": "Modern Times",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "once-upon-a-time-in-the-west",
+    "title": "Once Upon a Time in the West",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "cinema-paradiso",
+    "title": "Cinema Paradiso",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "rear-window",
+    "title": "Rear Window",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "alien",
+    "title": "Alien",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "city-lights",
+    "title": "City Lights",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "apocalypse-now",
+    "title": "Apocalypse Now",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "memento",
+    "title": "Memento",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "django-unchained",
+    "title": "Django Unchained",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "indiana-jones-and-the-raiders-of-the-lost-ark",
+    "title": "Indiana Jones and the Raiders of the Lost Ark",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "wall-e",
+    "title": "WALL·E",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "the-lives-of-others",
+    "title": "The Lives of Others",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "sunset-blvd",
+    "title": "Sunset Blvd.",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "paths-of-glory",
+    "title": "Paths of Glory",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "the-shining",
+    "title": "The Shining",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "the-great-dictator",
+    "title": "The Great Dictator",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "avengers-infinity-war",
+    "title": "Avengers: Infinity War",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "witness-for-the-prosecution",
+    "title": "Witness for the Prosecution",
+    "imdb_rating": 8.4
+  },
+  {
+    "slug": "aliens",
+    "title": "Aliens",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "spider-man-into-the-spider-verse",
+    "title": "Spider-Man: Into the Spider-Verse",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "american-beauty",
+    "title": "American Beauty",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "the-dark-knight-rises",
+    "title": "The Dark Knight Rises",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "inglourious-basterds",
+    "title": "Inglourious Basterds",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "oldboy",
+    "title": "Oldboy",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "amadeus",
+    "title": "Amadeus",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "coco",
+    "title": "Coco",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "toy-story",
+    "title": "Toy Story",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "braveheart",
+    "title": "Braveheart",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "joker",
+    "title": "Joker",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "das-boot",
+    "title": "Das Boot",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "avengers-endgame",
+    "title": "Avengers: Endgame",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "princess-mononoke",
+    "title": "Princess Mononoke",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "good-will-hunting",
+    "title": "Good Will Hunting",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "once-upon-a-time-in-america",
+    "title": "Once Upon a Time in America",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "your-name",
+    "title": "Your Name.",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "singin-in-the-rain",
+    "title": "Singin' in the Rain",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "3-idiots",
+    "title": "3 Idiots",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "requiem-for-a-dream",
+    "title": "Requiem for a Dream",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "high-and-low",
+    "title": "High and Low",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "toy-story-3",
+    "title": "Toy Story 3",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "capernaum",
+    "title": "Capernaum",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "star-wars-episode-vi-return-of-the-jedi",
+    "title": "Star Wars: Episode VI - Return of the Jedi",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "2001-a-space-odyssey",
+    "title": "2001: A Space Odyssey",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "eternal-sunshine-of-the-spotless-mind",
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "come-and-see",
+    "title": "Come and See",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "reservoir-dogs",
+    "title": "Reservoir Dogs",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "the-hunt",
+    "title": "The Hunt",
+    "imdb_rating": 8.3
+  },
+  {
+    "slug": "lawrence-of-arabia",
+    "title": "Lawrence of Arabia",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "citizen-kane",
+    "title": "Citizen Kane",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "m",
+    "title": "M",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "ikiru",
+    "title": "Ikiru",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "north-by-northwest",
+    "title": "North by Northwest",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "vertigo",
+    "title": "Vertigo",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-apartment",
+    "title": "The Apartment",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "amelie",
+    "title": "Amélie",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "double-indemnity",
+    "title": "Double Indemnity",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "a-clockwork-orange",
+    "title": "A Clockwork Orange",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "full-metal-jacket",
+    "title": "Full Metal Jacket",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "scarface",
+    "title": "Scarface",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "incendies",
+    "title": "Incendies",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "hamilton",
+    "title": "Hamilton",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "heat",
+    "title": "Heat",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "up",
+    "title": "Up",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "to-kill-a-mockingbird",
+    "title": "To Kill a Mockingbird",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-sting",
+    "title": "The Sting",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "a-separation",
+    "title": "A Separation",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "metropolis",
+    "title": "Metropolis",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "die-hard",
+    "title": "Die Hard",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "l-a-confidential",
+    "title": "L.A. Confidential",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "taxi-driver",
+    "title": "Taxi Driver",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "indiana-jones-and-the-last-crusade",
+    "title": "Indiana Jones and the Last Crusade",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "snatch",
+    "title": "Snatch",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "bicycle-thieves",
+    "title": "Bicycle Thieves",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "like-stars-on-earth",
+    "title": "Like Stars on Earth",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "1917",
+    "title": "1917",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "top-gun-maverick",
+    "title": "Top Gun: Maverick",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "downfall",
+    "title": "Downfall",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "dangal",
+    "title": "Dangal",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "for-a-few-dollars-more",
+    "title": "For a Few Dollars More",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "batman-begins",
+    "title": "Batman Begins",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-kid",
+    "title": "The Kid",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "some-like-it-hot",
+    "title": "Some Like It Hot",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-father",
+    "title": "The Father",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "all-about-eve",
+    "title": "All About Eve",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-wolf-of-wall-street",
+    "title": "The Wolf of Wall Street",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "green-book",
+    "title": "Green Book",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "judgment-at-nuremberg",
+    "title": "Judgment at Nuremberg",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "guardians-of-the-galaxy-vol-3",
+    "title": "Guardians of the Galaxy Vol. 3",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "ran",
+    "title": "Ran",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "casino",
+    "title": "Casino",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-truman-show",
+    "title": "The Truman Show",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "there-will-be-blood",
+    "title": "There Will Be Blood",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "pan-s-labyrinth",
+    "title": "Pan's Labyrinth",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "unforgiven",
+    "title": "Unforgiven",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "shutter-island",
+    "title": "Shutter Island",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "the-sixth-sense",
+    "title": "The Sixth Sense",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "jurassic-park",
+    "title": "Jurassic Park",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "a-beautiful-mind",
+    "title": "A Beautiful Mind",
+    "imdb_rating": 8.2
+  },
+  {
+    "slug": "yojimbo",
+    "title": "Yojimbo",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-treasure-of-the-sierra-madre",
+    "title": "The Treasure of the Sierra Madre",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "monty-python-and-the-holy-grail",
+    "title": "Monty Python and the Holy Grail",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "no-country-for-old-men",
+    "title": "No Country for Old Men",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "kill-bill-vol-1",
+    "title": "Kill Bill: Vol. 1",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-great-escape",
+    "title": "The Great Escape",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "rashomon",
+    "title": "Rashomon",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-thing",
+    "title": "The Thing",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "finding-nemo",
+    "title": "Finding Nemo",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "spider-man-no-way-home",
+    "title": "Spider-Man: No Way Home",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-elephant-man",
+    "title": "The Elephant Man",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "chinatown",
+    "title": "Chinatown",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "raging-bull",
+    "title": "Raging Bull",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "v-for-vendetta",
+    "title": "V for Vendetta",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "gone-with-the-wind",
+    "title": "Gone with the Wind",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "dial-m-for-murder",
+    "title": "Dial M for Murder",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "lock-stock-and-two-smoking-barrels",
+    "title": "Lock, Stock and Two Smoking Barrels",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "inside-out",
+    "title": "Inside Out",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "howl-s-moving-castle",
+    "title": "Howl's Moving Castle",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-secret-in-their-eyes",
+    "title": "The Secret in Their Eyes",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "three-billboards-outside-ebbing-missouri",
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "trainspotting",
+    "title": "Trainspotting",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-bridge-on-the-river-kwai",
+    "title": "The Bridge on the River Kwai",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "prisoners",
+    "title": "Prisoners",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "fargo",
+    "title": "Fargo",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "warrior",
+    "title": "Warrior",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "gran-torino",
+    "title": "Gran Torino",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "catch-me-if-you-can",
+    "title": "Catch Me If You Can",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "my-neighbor-totoro",
+    "title": "My Neighbor Totoro",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "million-dollar-baby",
+    "title": "Million Dollar Baby",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "children-of-heaven",
+    "title": "Children of Heaven",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "blade-runner",
+    "title": "Blade Runner",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-gold-rush",
+    "title": "The Gold Rush",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "klaus",
+    "title": "Klaus",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "harry-potter-and-the-deathly-hallows-part-2",
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "before-sunrise",
+    "title": "Before Sunrise",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "12-years-a-slave",
+    "title": "12 Years a Slave",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "ben-hur",
+    "title": "Ben-Hur",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-grand-budapest-hotel",
+    "title": "The Grand Budapest Hotel",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "on-the-waterfront",
+    "title": "On the Waterfront",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "gone-girl",
+    "title": "Gone Girl",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "wild-strawberries",
+    "title": "Wild Strawberries",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-general",
+    "title": "The General",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "barry-lyndon",
+    "title": "Barry Lyndon",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "in-the-name-of-the-father",
+    "title": "In the Name of the Father",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-deer-hunter",
+    "title": "The Deer Hunter",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "hacksaw-ridge",
+    "title": "Hacksaw Ridge",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-third-man",
+    "title": "The Third Man",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-wages-of-fear",
+    "title": "The Wages of Fear",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "memories-of-murder",
+    "title": "Memories of Murder",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "wild-tales",
+    "title": "Wild Tales",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "sherlock-jr",
+    "title": "Sherlock Jr.",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "john-wick-chapter-4",
+    "title": "John Wick: Chapter 4",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "mr-smith-goes-to-washington",
+    "title": "Mr. Smith Goes to Washington",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "mad-max-fury-road",
+    "title": "Mad Max: Fury Road",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "mary-and-max",
+    "title": "Mary and Max",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to Train Your Dragon",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "dead-poets-society",
+    "title": "Dead Poets Society",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "monsters-inc",
+    "title": "Monsters, Inc.",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-seventh-seal",
+    "title": "The Seventh Seal",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "jaws",
+    "title": "Jaws",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "room",
+    "title": "Room",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-big-lebowski",
+    "title": "The Big Lebowski",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "tokyo-story",
+    "title": "Tokyo Story",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "ford-v-ferrari",
+    "title": "Ford v Ferrari",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "the-passion-of-joan-of-arc",
+    "title": "The Passion of Joan of Arc",
+    "imdb_rating": 8.1
+  },
+  {
+    "slug": "hotel-rwanda",
+    "title": "Hotel Rwanda",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "rocky",
+    "title": "Rocky",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "ratatouille",
+    "title": "Ratatouille",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "platoon",
+    "title": "Platoon",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "logan",
+    "title": "Logan",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "spotlight",
+    "title": "Spotlight",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-terminator",
+    "title": "The Terminator",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "stand-by-me",
+    "title": "Stand by Me",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "rush",
+    "title": "Rush",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "network",
+    "title": "Network",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "before-sunset",
+    "title": "Before Sunset",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "into-the-wild",
+    "title": "Into the Wild",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-wizard-of-oz",
+    "title": "The Wizard of Oz",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-best-years-of-our-lives",
+    "title": "The Best Years of Our Lives",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-exorcist",
+    "title": "The Exorcist",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "groundhog-day",
+    "title": "Groundhog Day",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-incredibles",
+    "title": "The Incredibles",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "la-haine",
+    "title": "La haine",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "to-be-or-not-to-be",
+    "title": "To Be or Not to Be",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "hachi-a-dog-s-tale",
+    "title": "Hachi: A Dog's Tale",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-battle-of-algiers",
+    "title": "The Battle of Algiers",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-grapes-of-wrath",
+    "title": "The Grapes of Wrath",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "pather-panchali",
+    "title": "Pather Panchali",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "my-father-and-my-son",
+    "title": "My Father and My Son",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "amores-perros",
+    "title": "Amores Perros",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "jai-bhim",
+    "title": "Jai Bhim",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "rebecca",
+    "title": "Rebecca",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-handmaiden",
+    "title": "The Handmaiden",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "cool-hand-luke",
+    "title": "Cool Hand Luke",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-sound-of-music",
+    "title": "The Sound of Music",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "it-happened-one-night",
+    "title": "It Happened One Night",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-400-blows",
+    "title": "The 400 Blows",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "persona",
+    "title": "Persona",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "life-of-brian",
+    "title": "Life of Brian",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-iron-giant",
+    "title": "The Iron Giant",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "the-help",
+    "title": "The Help",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "aladdin",
+    "title": "Aladdin",
+    "imdb_rating": 8.0
+  },
+  {
+    "slug": "dances-with-wolves",
+    "title": "Dances with Wolves",
+    "imdb_rating": 8.0
+  }
+]

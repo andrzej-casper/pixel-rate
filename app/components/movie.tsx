@@ -8,7 +8,7 @@ export function MovieView({ movie }) {
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
     <div className="flex">
       <div className="w-1/3">
-        <img src={movie.pictureUrl} alt="Movie Poster" className="w-full h-full object-cover" />
+        <img src={movie.slug} alt="Movie Poster" className="w-full h-full object-cover" />
       </div>
       <div className="w-2/3 p-4">
         <h2 className="text-xl font-bold mb-2">{movie.title}</h2>
