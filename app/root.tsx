@@ -2,12 +2,12 @@ import type { LinksFunction, LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { LiveReload } from "remix-gitpod-livereload";
 import { ToastContainer } from 'react-toastify';
 
 import { getUser } from "~/session.server";
