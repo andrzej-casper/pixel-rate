@@ -3,7 +3,7 @@ import { CLPublicKey, CLValueBuilder, CasperClient, DeployUtil, RuntimeArgs, Con
 //const NODE_URL = "http://65.108.127.242:7777/rpc";
 const NODE_URL = "http://127.0.0.1:7777/rpc";
 const NETWORK_NAME = "casper-test";
-const CONTRACT_HASH = "hash-bedf0bf50b37646f1c4056578d4781bf7b68ff888e34d9db1e38733364c181b1"; // TODO: Deploy new
+const CONTRACT_HASH = "hash-af2ae1f456caeeff599b6dc91eb280f7283de9cb7dcefe3aff523b0fcf65c889";
 
 const fromHexString = (hexString) =>
   Uint8Array.from(hexString.match(/.{1,2}/g).map((byte) => parseInt(byte, 16)));
@@ -16,7 +16,7 @@ export async function sendDeploy(activeKey, movie, rating) {
   const contract = new Contracts.Contract(casperClient);
   const args = RuntimeArgs.fromMap({
     movie: CLValueBuilder.string(movie),
-    rating: CLValueBuilder.string(''+rating),
+    rating: CLValueBuilder.u8(rating),
   });
   contract.setContractHash(CONTRACT_HASH);
   const deploy = contract.callEntrypoint("rate_movie", args, activePublicKey, NETWORK_NAME, (2 * 1000000000).toString());
