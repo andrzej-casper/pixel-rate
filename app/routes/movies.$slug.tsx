@@ -1,24 +1,17 @@
-import { json } from "@remix-run/node";
 import { useLoaderData, useNavigate } from "@remix-run/react";
-import { readFile } from "fs/promises";
 import { useState } from "react";
-import invariant from "tiny-invariant";
 import { MoviePageView } from "~/components/moviepage";
-import { getMovie } from "~/models/movie.server";
-import { loaderMovieWasm } from "~/models/movie-wasm.server";
+import { loaderMovie } from "~/models/movie-loader.server";
 import { useOptionalUser } from "~/utils";
 import useApp from "~/context";
 import { toast } from "react-toastify";
 import { sendDeploy } from "~/blockchain";
 
-export const loader = loaderMovieWasm;
+export const loader = loaderMovie;
 
 export default function MovieDetailsPage() {
-  const { movie, ratingWasmStr } = useLoaderData<typeof loader>();
-  const ratingWasm = new Uint8Array(atob(ratingWasmStr).split("").map(
-      (char)=>char.charCodeAt(0)
-    )
-  );
+  const { movie } = useLoaderData<typeof loader>();
+
   const user = useOptionalUser();
   const { activeWalletKey } = useApp();
   const navigate = useNavigate();
@@ -41,7 +34,7 @@ export default function MovieDetailsPage() {
       return;
     }
 
-    const depHash = await sendDeploy(activeWalletKey, ratingWasm, slug, rate);
+    const depHash = await sendDeploy(activeWalletKey, slug, rate);
     toast.success("Rating submitted to blockchain!");
     setTimeout(() => {
       window.open("https://testnet.cspr.live/deploy/" + depHash, "_blank");
