@@ -2,8 +2,9 @@ import { CLPublicKey, CLValueBuilder, CasperClient, DeployUtil, RuntimeArgs, Con
 
 //const NODE_URL = "http://65.108.127.242:7777/rpc";
 const NODE_URL = "http://127.0.0.1:7777/rpc";
+// Deployment details taken from https://github.com/andrzej-casper/pixel-rate-contract/README.adoc
 const NETWORK_NAME = "casper-test";
-const CONTRACT_HASH = "hash-af2ae1f456caeeff599b6dc91eb280f7283de9cb7dcefe3aff523b0fcf65c889";
+const CONTRACT_HASH = "hash-be3d58d00bfe1af1219addce925af80d68ca6bbfad3d00f36ed9cefa2ecc4266";
 
 const fromHexString = (hexString) =>
   Uint8Array.from(hexString.match(/.{1,2}/g).map((byte) => parseInt(byte, 16)));
