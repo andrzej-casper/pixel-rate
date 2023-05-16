@@ -78,8 +78,13 @@ export default function WalletButton({
     // - https://github.com/make-software/casper-wallet-sdk#installation
     // - https://github.com/make-software/casper-wallet-sdk#usage
     //
-
-    // TODO
+    try {
+      const providerConstructor = window.CasperWalletProvider;
+      invariant(providerConstructor, "CasperWalletProvider not found");
+      setProvider(providerConstructor());
+    } catch (e) {
+      console.error(e);
+    }
   });
 
   useEffect(() => {
