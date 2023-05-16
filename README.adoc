@@ -16,29 +16,41 @@ Click this button to create a https://gitpod.io[Gitpod] workspace with the proje
 [#img-sunset,link=https://github.com/andrzej-casper/pixel-rate/tree/master]
 image::https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod[Gitpod Ready-to-Code]
 
-== Development - TODO
+== Local development
 
-- This step only applies if you've opted out of having the CLI install dependencies for you:
+=== Setup
 
-  ```sh
-  npx remix init
-  ```
+. Install dependencies
++
+[source,bash]
+----
+$ yarn install
+----
 
-- Initial setup: _If you just generated this project, this step has been done for you._
+. Adjust `.env` configuration
++
+[source,bash]
+----
+$ cp ./.env.example ./.env
+----
 
-  ```sh
-  npm run setup
-  ```
+. Run initial setup (database seeding, etc.)
++
+[source,bash]
+----
+$ yarn run setup
+----
 
-- Start dev server:
+=== Running app
 
-  ```sh
-  npm run dev
-  ```
+[source,bash]
+----
+$ yarn run dev
+----
 
 This starts your app in development mode, rebuilding assets on file changes.
 
 The database seed script creates a new user with some data you can use to get started:
 
-- Email: `rachel@remix.run`
-- Password: `racheliscool`
+- Email: `test@casper.network`
+- Password: `casper`
