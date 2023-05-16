@@ -39,6 +39,7 @@ export default function WalletButton({
 
     const state: CasperWalletState = JSON.parse(event.detail);
     setActiveWalletKey(state.activeKey);
+    connectedCallback(state.activeKey);
   }, [setActiveWalletKey]);
 
   const handleDisconnected = useCallback((event: any) => {
