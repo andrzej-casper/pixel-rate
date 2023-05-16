@@ -38,8 +38,12 @@ export default function WalletButton({
     // Resources:
     // - https://github.com/make-software/casper-wallet-sdk#methods
     //
-
-    // TODO
+    if (await provider.isConnected()) {
+      const key = await provider.getActivePublicKey();
+      setActiveWalletKey(key);
+    } else {
+      await provider.requestConnection();
+    }
   }
 
   const handleConnected = useCallback((event: any) => {
