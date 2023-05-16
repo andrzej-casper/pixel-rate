@@ -10,10 +10,13 @@ import { SOUVENIR_ENDPOINT } from "~/config";
 import { logout } from "~/session.server";
 import { toast } from "react-toastify";
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
+import useApp from "~/context";
+import { CLPublicKey } from "casper-js-sdk";
+import { useEffectOnce } from "~/hooks";
 
 export const loader = async ({ request }: LoaderArgs) => {
-  const userId = await getUserId(request);
-  if (userId) return redirect("/");
+  // const userId = await getUserId(request);
+  // if (userId) return redirect("/");
 
   return null;
 };
@@ -22,6 +25,7 @@ export const action = async ({ request }: ActionArgs) => {
   const formData = await request.formData();
   const userMessage = formData.get("userMessage");
   const fingerprint = formData.get("fingerprint");
+  const accountHash = formData.get("account_hash");
 
   if (userMessage.length > 64) {
     return json(
@@ -37,25 +41,33 @@ export const action = async ({ request }: ActionArgs) => {
     );
   }
 
+  if (accountHash == null || accountHash.length == 0) {
+    return json(
+      { errors: { userMessage: null, password: "Account hash is required." } },
+      { status: 400 }
+    );
+  }
+
+  const data = {
+    "account_hash": accountHash,
+    "metadata": userMessage,
+    "fingerprint": fingerprint,
+  };
+
+  console.log("Submitting", data);
+
   const response = await fetch(SOUVENIR_ENDPOINT, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      "account_hash": "7188948fdc3d97a762fcd62f8b17ef128e5d38d09ce535cc97df3c5931369b90",
-      "metadata": userMessage,
-      "fingerprint": fingerprint,
-    }),
+    body: JSON.stringify(data),
   });
 
   const result = await response.text();
   console.log("Souvenir result:", result);
 
-  toast.success("NFT claimed!");
-
-  // Logout user to avoid reclaiming NFT
-  return logout(request);
+  return redirect("/nft-success")
 };
 
 export const meta: V2_MetaFunction = () => [{ title: "Claim souvenir NFT" }];
@@ -66,6 +78,25 @@ export default function NFT() {
   const userMessageRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const [fingerprint, setFingerprint] = useState("");
+  const { activeWalletKey } = useApp();
+  const [accountHash, setAccountHash ] = useState("");
+
+  useEffectOnce(() => {
+    if (!activeWalletKey) {
+      toast.warning("You must be logged first.");
+      navigate("/login");
+      return;
+    }
+  });
+
+  useEffect(() => {
+    if (activeWalletKey !== null) {
+      const accountHash = CLPublicKey.fromHex(activeWalletKey).toAccountRawHashStr();
+      console.log("Got new wallet key", accountHash);
+      setAccountHash(accountHash);
+    }
+  }, [activeWalletKey]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -107,7 +138,7 @@ export default function NFT() {
                 aria-invalid={actionData?.errors?.userMessage ? true : undefined}
                 aria-describedby="userMessage-error"
                 className="w-full rounded border border-gray-500 px-2 py-1 text-lg"
-                value="My NFT for participating in the Casper workshop"
+                defaultValue="My NFT for participating in the Casper workshop"
               />
               {actionData?.errors?.userMessage && (
                 <div className="pt-1 text-red-700" id="userMessage-error">
@@ -118,6 +149,7 @@ export default function NFT() {
           </div>
 
           <input type="hidden" name="fingerprint" value={fingerprint} />
+          <input type="hidden" name="account_hash" value={accountHash} />
 
           <button
             type="submit"
