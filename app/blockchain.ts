@@ -28,8 +28,11 @@ export async function sendDeploy(activeKey, movie, rating) {
   // - https://github.com/casper-ecosystem/casper-js-sdk/blob/08d999695dfa71c89dd77062e1732ccae99052b7/src/lib/Contracts.ts#L99
   // - https://github.com/caspercommunityio/blockchain-authenticator-app/blob/435a0edd54b51a9988b29f2939984ea81f47fea8/src/app/services/blockchain.service.ts#L54-L58
   //
-
-  // TODO
+  const args = RuntimeArgs.fromMap({
+    movie: CLValueBuilder.string(movie),
+    rating: CLValueBuilder.u8(rating),
+  });
+  const deploy = contract.callEntrypoint("rate_movie", args, activePublicKey, NETWORK_NAME, (2 * 1000000000).toString());
 
   const deployJson = DeployUtil.deployToJson(deploy);
 
