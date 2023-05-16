@@ -10,7 +10,7 @@ export const loader = async () => {
 
 export default function Movies() {
   const { movies } = useLoaderData<typeof loader>();
-  console.log(movies);
+
   return (
     <main className="container mx-auto px-4">
       <div className="text-3xl font-extrabold sm:text-4xl py-10 items-center select-none">
