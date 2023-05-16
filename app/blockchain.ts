@@ -72,8 +72,7 @@ export async function sendDeploy(activeKey, movie, rating) {
   //
   // Resources:
   // - https://github.com/casper-ecosystem/casper-js-sdk/blob/08d999695dfa71c89dd77062e1732ccae99052b7/src/lib/CasperClient.ts
-
-  // TODO
+  await casperClient.putDeploy(signedDeploy);
 
   return deployHash;
 }
