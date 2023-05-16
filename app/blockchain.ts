@@ -10,15 +10,31 @@ export async function sendDeploy(activeKey, movie, rating) {
   const casperClient = new CasperClient(NODE_URL);
 
   const contract = new Contracts.Contract(casperClient);
+  contract.setContractHash(CONTRACT_HASH);
+
+  // ================
+  // = Exercise 02a =
+  // ================
+  //
+  // Define deployment for calling entrypoint named "rate_movie".
+  // As arguments you should pass 2 variables:
+  // - `movie` - as string type,
+  // - `rating` - as u8 type.
+  //
+  // You can use `activePublicKey` and `NETWORK_NAME` for next parameters.
+  // For payment, 2 CSPRs is enough to be specified - number of motes as string.
+  //
+  // Resources:
+  // - https://github.com/casper-ecosystem/casper-js-sdk/blob/08d999695dfa71c89dd77062e1732ccae99052b7/src/lib/Contracts.ts#L99
+  // - https://github.com/caspercommunityio/blockchain-authenticator-app/blob/435a0edd54b51a9988b29f2939984ea81f47fea8/src/app/services/blockchain.service.ts#L54-L58
+  //
   const args = RuntimeArgs.fromMap({
     movie: CLValueBuilder.string(movie),
     rating: CLValueBuilder.u8(rating),
   });
-  contract.setContractHash(CONTRACT_HASH);
   const deploy = contract.callEntrypoint("rate_movie", args, activePublicKey, NETWORK_NAME, (2 * 1000000000).toString());
 
   const deployJson = DeployUtil.deployToJson(deploy);
-  //console.log(deployJson);
 
   const CasperWalletProvider = window.CasperWalletProvider;
   const provider = CasperWalletProvider();
@@ -28,7 +44,6 @@ export async function sendDeploy(activeKey, movie, rating) {
   let signedDeployJSON;
   try {
     let signature = await provider.sign(JSON.stringify(deployJson), activeKey);
-    // console.log(signature)
     if (signature.cancelled) {
       alert('Sign cancelled');
     } else {
@@ -48,8 +63,16 @@ export async function sendDeploy(activeKey, movie, rating) {
   const deployHash = signedDeployJSON.deploy.hash;
   console.log("Deploy Hash", deployHash);
 
-  let res = await casperClient.putDeploy(signedDeploy);
-  console.log('dep res', res);
+  // ================
+  // = Exercise 02b =
+  // ================
+  //
+  // After deployment is signed - `signedDeploy` - it can be submitted to blokchain.
+  // Use relevant casperClient call to submit it.
+  //
+  // Resources:
+  // - https://github.com/casper-ecosystem/casper-js-sdk/blob/08d999695dfa71c89dd77062e1732ccae99052b7/src/lib/CasperClient.ts
+  await casperClient.putDeploy(signedDeploy);
 
   return deployHash;
 }
