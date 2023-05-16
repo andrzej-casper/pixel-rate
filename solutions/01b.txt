@@ -1,0 +1,6 @@
+if (await provider.isConnected()) {
+  const key = await provider.getActivePublicKey();
+  setActiveWalletKey(key);
+} else {
+  await provider.requestConnection();
+}

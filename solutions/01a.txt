@@ -1,0 +1,7 @@
+try {
+  const providerConstructor = window.CasperWalletProvider;
+  invariant(providerConstructor, "CasperWalletProvider not found");
+  setProvider(providerConstructor());
+} catch (e) {
+  console.error(e);
+}

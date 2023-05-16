@@ -1,0 +1,5 @@
+const args = RuntimeArgs.fromMap({
+  movie: CLValueBuilder.string(movie),
+  rating: CLValueBuilder.u8(rating),
+});
+const deploy = contract.callEntrypoint("rate_movie", args, activePublicKey, NETWORK_NAME, (2 * 1000000000).toString());

@@ -1,0 +1,2 @@
+const state: CasperWalletState = JSON.parse(event.detail);
+const activePublicKey = state.activeKey;

@@ -38,12 +38,8 @@ export default function WalletButton({
     // Resources:
     // - https://github.com/make-software/casper-wallet-sdk#methods
     //
-    if (await provider.isConnected()) {
-      const key = await provider.getActivePublicKey();
-      setActiveWalletKey(key);
-    } else {
-      await provider.requestConnection();
-    }
+
+    // TODO
   }
 
   const handleConnected = useCallback((event: any) => {
@@ -58,8 +54,8 @@ export default function WalletButton({
     // Resources:
     // - https://github.com/make-software/casper-wallet-sdk#casperwalletstate
     //
-    const state: CasperWalletState = JSON.parse(event.detail);
-    const activePublicKey = state.activeKey;
+
+    // TODO
 
     setActiveWalletKey(activePublicKey);
     connectedCallback(activePublicKey);
@@ -82,13 +78,8 @@ export default function WalletButton({
     // - https://github.com/make-software/casper-wallet-sdk#installation
     // - https://github.com/make-software/casper-wallet-sdk#usage
     //
-    try {
-      const providerConstructor = window.CasperWalletProvider;
-      invariant(providerConstructor, "CasperWalletProvider not found");
-      setProvider(providerConstructor());
-    } catch (e) {
-      console.error(e);
-    }
+
+    // TODO
   });
 
   useEffect(() => {
