@@ -33,7 +33,7 @@ export default function Header() {
             </div>
           </div>
           <div className="flex flex-row">
-            { walletKey === null &&
+            { walletKey !== null &&
               <Link to="/nft">
                 <div className="items-center px-4 py-2 border border-transparent text-base font-medium text-primary-400 hover:text-primary-600">
                   Souvenir NFT
