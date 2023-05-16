@@ -9,6 +9,17 @@ App for rating movies used in Barcelona DevCentralized workshop.
 * Souvenir NFT contract: https://github.com/andrzej-casper/pixel-rate-nft
 ====
 
+== Workshop agenda
+
+. Warmup
+. PixelRate - web2 application showcase
+. [exercise 00] Wallet setup
+. Migration from web2 to web3 - authentication
+. [exercise 01] Casper Wallet integration
+. Migration from web2 to web3 - storage
+. [exercise 02] Calling remote smart contract
+. Collecting souvenir NFT
+
 == Quickstart
 
 Click this button to create a https://gitpod.io[Gitpod] workspace with the project set up:
