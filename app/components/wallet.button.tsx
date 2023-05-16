@@ -27,14 +27,10 @@ export default function WalletButton({
     }
 
     if (await provider.isConnected()) {
-      //console.log("already connected!");
       const key = await provider.getActivePublicKey();
       setActiveWalletKey(key);
-      connectedCallback(key);
     } else {
-      //await provider.disconnectFromSite();
-      let request_res = await provider.requestConnection();
-      //console.log("Request", request_res);
+      await provider.requestConnection();
     }
   }
 
