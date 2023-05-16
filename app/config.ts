@@ -5,4 +5,4 @@ export const NODE_URL = "http://casper-node.xyz:7777/rpc/";
 export const NETWORK_NAME = "casper-test";
 export const CONTRACT_HASH = "hash-be3d58d00bfe1af1219addce925af80d68ca6bbfad3d00f36ed9cefa2ecc4266";
 
-export const SOUVENIR_ENDPOINT = "http://localhost:8035/claim-nft";
+export const SOUVENIR_ENDPOINT = "http://127.0.0.1:8035/claim-nft";
