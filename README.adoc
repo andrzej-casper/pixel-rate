@@ -15,7 +15,7 @@ App for rating movies used in Barcelona DevCentralized workshop.
 . PixelRate - web2 application showcase
 . [exercise 00] Wallet setup
 . Migration from web2 to web3 - authentication
-. [exercise 01] Casper Wallet integration
+. [exercise 01] Casper Wallet integration - `components/wallet.button.tsx`
 . Migration from web2 to web3 - storage
 . [exercise 02] Calling remote smart contract
 . Collecting souvenir NFT
