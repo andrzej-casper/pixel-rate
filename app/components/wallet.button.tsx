@@ -58,8 +58,8 @@ export default function WalletButton({
     // Resources:
     // - https://github.com/make-software/casper-wallet-sdk#casperwalletstate
     //
-
-    // TODO
+    const state: CasperWalletState = JSON.parse(event.detail);
+    const activePublicKey = state.activeKey;
 
     setActiveWalletKey(activePublicKey);
     connectedCallback(activePublicKey);
